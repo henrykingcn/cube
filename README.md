@@ -1,2 +1,2 @@
 # Cube for Linux
-A ONE-BUTTON Launcher of Minecraft server
+A ONE-BUTTON Linux Launcher for Minecraft server
