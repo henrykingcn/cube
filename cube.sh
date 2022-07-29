@@ -517,7 +517,7 @@ import_server_for_case_d() {
             read -n1
         fi
     done
-}
+s}
 
 clear
 echo "[Cube]已获取当前目录地址！"
