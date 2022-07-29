@@ -330,7 +330,7 @@ assistant_for_case_6() {
             if [[ $qe =~ "开服" ]] || [[ $qe =~ "启动" ]] || [[ $qe =~ "开启服务器" ]] || [[ $qe =~ "使用" ]] || [[ $qe =~ "用" ]] || [[ $qe =~ "服务器" ]]; then
                 echo -e "\033[45;37m [imgcre] \033[0m正在输入中...."
                 sleep 2
-                echo -e "\033[45;37m [imgcre] \033[0m$name 你好！可以把事先准备好的服务端放在与开服器同一个文件夹里，或者直接下载服务端直接开服即可！"
+                echo -e "\033[45;37m [imgcre] \033[0m$name 你好！可以把事先准备好的服务端放在与开服器同一个文件夹里，或者在主菜单选择导入服务端，或者直接下载服务端直接开服即可！"
                 echo
                 #怎么开服系列　end
             elif [[ $qe =~ "安装" ]] || [[ $qe =~ "装" ]] || [[ $qe =~ "弄" ]] || [[ $qe =~ "搞" ]] || [[ $qe =~ "整" ]] || [[ $qe =~ "办" ]] || [[ $qe =~ "做" ]]; then
@@ -351,25 +351,33 @@ assistant_for_case_6() {
 
                 else
 
-                    if [[ $qe =~ "搞" ]] || [[ $qe =~ "弄" ]] || [[ $qe =~ "做" ]] || [[ $qe =~ "办" ]] || [[ $qe =~ "整" ]]; then
-                        echo -e "\033[45;37m [imgcre] \033[0m正在输入中...."
-                        sleep 2
-                        echo -e "\033[45;37m [imgcre] \033[0m$name 你好！请问问题问完整！"
-                        echo
-                    fi
+                    #if [[ $qe =~ "搞" ]] || [[ $qe =~ "弄" ]] || [[ $qe =~ "做" ]] || [[ $qe =~ "办" ]] || [[ $qe =~ "整" ]]; then
+                    echo -e "\033[45;37m [imgcre] \033[0m正在输入中...."
+                    sleep 2
+                    echo -e "\033[45;37m [imgcre] \033[0m$name 你好！请把问题问完整！"
+                    echo
+                    #fi
 
                 fi
 
             fi
 
         elif
-
-            [[ $qe =~ "退出" ]]
+            [[ $qe =~ "退出" ]] || [[ $qe =~ "没有" ]] || [[ $qe =~ "无" ]]
         then
-            echo "[Cube]正在断线...."
-            sleep 2
-            echo -e "\033[45;37m [imgcre] \033[0m谢谢你的咨询"
-            sleep 1
+            if [[ $qe =~ "谢谢" ]] || [[ $qe =~ "感谢" ]];then
+                echo -e "\033[45;37m [imgcre] \033[0m正在输入中...."
+                sleep 2
+                echo -e "\033[45;37m [imgcre] \033[0m不客气！谢谢你的咨询！"
+                sleep 1
+                echo "[Cube]正在断线...."
+            else
+                echo -e "\033[45;37m [imgcre] \033[0m正在输入中...."
+                sleep 2
+                echo -e "\033[45;37m [imgcre] \033[0m谢谢你的咨询"
+                sleep 1
+                echo "[Cube]正在断线...."
+            fi
             break
         elif [[ $qe =~ "帮助" ]]; then
             echo -e "\033[45;37m [imgcre] \033[0m正在输入中...."
